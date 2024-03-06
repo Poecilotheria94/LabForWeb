@@ -1,0 +1,40 @@
+<div class="container" style="display: flex">
+  <div class="form-container">
+    <form #aiutoform="ngForm" (ngSubmit)="onSubmit(aiutoform)">
+      <mat-form-field appearance="fill">
+        <mat-label>Inserisci e-mail</mat-label>
+        <input matInput type="email" name="email" ngModel required email />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Come possiamo aiutarti?</mat-label>
+        <textarea
+          matInput
+          type="text"
+          name="textarea"
+          ngModel
+          required
+        ></textarea>
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!aiutoform.valid"
+        style="
+          margin: 0 auto;
+          background-color: rgba(208, 42, 208, 0.518);
+          color: aliceblue;
+        "
+      >
+        Invia
+      </button>
+    </form>
+  </div>
+  <img
+    src="../../../assets/immagini/batman.png"
+    alt=""
+    style="width: 70vh; float: right"
+  />
+</div>

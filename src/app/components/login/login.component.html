@@ -1,0 +1,59 @@
+<h1>Effettua il Log-in</h1>
+
+<div
+  class="center-screen"
+  style="position: absolute; z-index: 9999; transform: translateX(120px)"
+>
+  <form #loginForm="ngForm" class="auth" (ngSubmit)="login()">
+    <mat-form-field appearance="fill">
+      <mat-label>E-mail</mat-label>
+      <input
+        #emailInput="ngModel"
+        matInput
+        type="email"
+        name="email"
+        [(ngModel)]="model.email"
+        placeholder="Inserisci la tua E-mail"
+        required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      />
+      <mat-error *ngIf="emailInput.hasError('required')"
+        >E-mail obbligatoria</mat-error
+      >
+      <mat-error *ngIf="emailInput.hasError('pattern')"
+        >E-mail non valida</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        #passwordInput="ngModel"
+        matInput
+        type="password"
+        name="password"
+        [(ngModel)]="model.password"
+        placeholder="Inserisci la tua Password"
+        required
+      />
+      <mat-error *ngIf="passwordInput.hasError('required')"
+        >Password obbligatoria</mat-error
+      >
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="loginForm.form.invalid"
+    >
+      Entra
+    </button>
+
+    <mat-error *ngIf="errorMessage">{{ errorMessage }}</mat-error>
+  </form>
+</div>
+
+<div class="image-overlay">
+  <img src="../../../assets/immagini/avengers.png" alt="" />
+</div>

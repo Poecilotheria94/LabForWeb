@@ -1,0 +1,24 @@
+<div *ngIf="authService.isUserLogged">
+  <app-slider></app-slider>
+  <app-catalogo></app-catalogo>
+</div>
+
+<div class="welcomePopUp" *ngIf="!authService.isUserLogged">
+  <div class="auth">
+    <p>
+      Benvenuti in LabTV , effettua il <a routerLink="/login">Login</a>, per
+      accedere al catalogo e scegliere tra migliaia di film.
+    </p>
+
+    <p>
+      Non hai un account? Effettua la
+      <a routerLink="/registrazione">Registrazione</a> e goditi le novità del
+      momento.
+    </p>
+
+    <p>
+      please download and start the db.json to login with these credentials:
+      email: ramil@gmail.com password: 1234
+    </p>
+  </div>
+</div>

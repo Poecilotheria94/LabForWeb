@@ -1,0 +1,72 @@
+<h1>
+  Non perdere l'opportunità di vivere il meglio dell'intrattenimento comodamente
+  a casa tua, registrati a Labtv.
+</h1>
+<div class="center-screen">
+  <form #laForm="ngForm" class="auth" (ngSubmit)="register()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input
+        #nameInput="ngModel"
+        matInput
+        type="text"
+        name="name"
+        [(ngModel)]="model.name"
+        placeholder="Nome..."
+        required
+      />
+      <mat-error *ngIf="nameInput.hasError('required')"
+        >Nome obbligatorio</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>E-mail</mat-label>
+      <input
+        #emailInput="ngModel"
+        matInput
+        type="email"
+        name="email"
+        [(ngModel)]="model.email"
+        placeholder="E-mail..."
+        required
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+      />
+      <mat-error *ngIf="emailInput.hasError('required')"
+        >E-mail obbligatoria</mat-error
+      >
+      <mat-error *ngIf="emailInput.hasError('pattern')"
+        >E-mail non valida</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        #passwordInput="ngModel"
+        matInput
+        type="password"
+        name="password"
+        [(ngModel)]="model.password"
+        placeholder="Password..."
+        required
+      />
+      <mat-error *ngIf="passwordInput.hasError('required')"
+        >Password obbligatoria</mat-error
+      >
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="laForm.form.invalid"
+    >
+      Entra
+    </button>
+    <mat-error *ngIf="errorMessage">{{ errorMessage }}</mat-error>
+  </form>
+</div>
+<div style="float: right; transform: translateY(-450px)">
+  <img src="../../../assets/immagini/supermario.png" alt="" />
+</div>
+<div style="height: 100px; transform: translateY(-500px)">
+  <img src="../../../assets/immagini/hunter.png" alt="" />
+</div>

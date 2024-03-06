@@ -1,0 +1,45 @@
+<!-- cerca-film.component.html -->
+
+<h1>Cerca le novità del momento</h1>
+
+<!-- Utilizza il tag form per gestire l'invio -->
+<form (ngSubmit)="cercaFilms()">
+  <!-- Assegna un nome al campo di input -->
+  <input
+    style="text-align: center; background-color: rgb(234, 183, 241)"
+    matInput
+    type="text"
+    placeholder="Inserisci il titolo del film"
+    [(ngModel)]="searchTerm"
+    name="searchTerm"
+  />
+  <!-- Il form viene sottomesso automaticamente senza il bisogno di un pulsante submit -->
+</form>
+
+<!-- Visualizza i risultati della ricerca -->
+<div class="container">
+  <div
+    class="card"
+    style="
+      width: 18rem;
+      height: 31rem;
+      padding: 5px;
+      background-color: rgba(72, 18, 91, 0.304);
+    "
+    *ngFor="let film of films"
+  >
+    <div class="contain">
+      <p class="oneLine">{{ film.title }}</p>
+      <a [routerLink]="['/dettaglioFilm', film.id]">
+        <img
+          src="https://image.tmdb.org/t/p/w500{{ film.poster_path }}"
+          style="width: 100%; height: 100%"
+      /></a>
+    </div>
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Aggiungi altri campi a seconda delle informazioni che vuoi visualizzare -->

@@ -1,0 +1,32 @@
+<mat-toolbar class="">
+  <div *ngIf="authService.isUserLogged">
+    <img src="../../../assets/immagini/logo.png" alt="" class="logo" />
+  </div>
+  <span class="example-spacer"></span>
+
+  <a routerLink="/home">
+    Home<mat-icon style="margin-right: 15px; transform: translateY(5px)"
+      >home</mat-icon
+    ></a
+  >
+  <div *ngIf="authService.isUserLogged">
+    <a routerLink="/cerca">
+      Cerca<mat-icon style="margin-right: 15px; transform: translateY(5px)"
+        >search</mat-icon
+      ></a
+    >
+    <a routerLink="/acquistati">
+      Acquistati<mat-icon style="margin-right: 15px; transform: translateY(5px)"
+        >star</mat-icon
+      ></a
+    >
+  </div>
+  <ng-container *ngIf="authService.isUserLogged">
+    <a (click)="logout()" style="color: whitesmoke">
+      Logout
+      <mat-icon style="margin-right: 15px; transform: translateY(5px)"
+        ><span class="material-symbols-outlined"> person </span></mat-icon
+      ></a
+    >
+  </ng-container>
+</mat-toolbar>

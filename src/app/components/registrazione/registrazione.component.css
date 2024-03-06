@@ -1,0 +1,43 @@
+.center-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 40%;
+  transform: translateX(400px);
+}
+
+.auth {
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #5c1c8466;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #4527a0;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  margin-top: 1em;
+  width: 100%;
+}
+
+/* Aggiunto stile specifico per il form di registrazione */
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #c5ea1d;
+  margin-bottom: 1.5em;
+  transform: translateY(100px);
+}

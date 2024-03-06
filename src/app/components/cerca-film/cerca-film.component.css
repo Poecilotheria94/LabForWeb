@@ -1,0 +1,78 @@
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: azure;
+  text-decoration: underline;
+  margin: 30px;
+  text-decoration: none;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+input {
+  width: 60%;
+  height: 40px;
+  border-radius: 10px;
+}
+
+/* cards */
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.oneLine {
+  color: azure;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+/* h1 p {
+  color: azure;
+  max-width: 100%;
+  word-wrap: normal;
+  word-wrap: break-word;
+  font-size: 0.7rem;
+} */
+
+img {
+  padding: 10px;
+  border-radius: 20px;
+}
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(255, 0, 0);
+}
+
+/* styles.css or your component's CSS file */
+
+.load-more-button {
+  margin-top: 20px; /* Add margin for spacing */
+  background-color: rgba(72, 18, 91, 0.8); /* Adjust the background color */
+  color: white; /* Set text color */
+}
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(72, 18, 91, 0.8); /* Adjust the background color */
+  color: white; /* Set text color */
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+.scroll-to-top-button:hover {
+  background-color: rgb(174, 0, 255);
+}

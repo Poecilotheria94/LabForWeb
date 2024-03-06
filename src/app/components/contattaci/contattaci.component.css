@@ -1,0 +1,21 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 20%;
+}
+.ng-tns-c1205077789-0,
+.ng-tns-c1205077789-1 {
+  color: rgb(142, 11, 212);
+  font-size: 13px;
+}
+.mat-mdc-text-field-wrapper {
+  width: 100%;
+}

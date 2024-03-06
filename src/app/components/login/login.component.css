@@ -1,0 +1,55 @@
+.center-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.auth {
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #5c1c8466;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  transform: translateY(100px);
+  text-align: center;
+  color: #050505;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-75px);
+}
+
+.image-overlay img {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.image-overlay::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height of the fading effect as needed */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+}

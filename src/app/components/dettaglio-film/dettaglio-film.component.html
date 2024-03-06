@@ -1,0 +1,118 @@
+<div
+  class="contain"
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  "
+>
+  <div
+    class="card"
+    style="
+      width: 15rem;
+      background-color: rgba(36, 15, 43, 0.503);
+      margin: 20px;
+      border-radius: 15px;
+      margin-left: 60px;
+    "
+    *ngIf="movieDetails"
+  >
+    <img
+      src="https://image.tmdb.org/t/p/original/{{ movieDetails.poster_path }}"
+      class="card-img-top"
+      alt="..."
+    />
+  </div>
+
+  <div
+    style="
+      width: 80%;
+      background-color: rgba(36, 15, 43, 0.503);
+      margin: 20px;
+      padding: 20px;
+      width: 60%;
+      display: flex;
+      flex-wrap: wrap;
+    "
+    class="moviesDetails"
+    *ngIf="movieDetails"
+  >
+    <div style="flex: 1">
+      <h1 style="color: wheat; margin: 0">
+        {{ movieDetails.title }}
+        <p style="font-size: 0.8rem; color: green; margin: 0">
+          {{ movieDetails.release_date }}
+        </p>
+      </h1>
+
+      <p class="card-text" style="color: white; margin-bottom: 20px">
+        {{ movieDetails.overview || "&nbsp;" }}
+      </p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; width: 100%">
+      <div
+        style="
+          width: 40%;
+          background-color: rgba(60, 255, 109, 0.579);
+          border: 1px solid rgb(126, 123, 18);
+          display: block;
+          margin-top: 15px;
+          height: 40px;
+        "
+        class="btn btn-primary"
+      >
+        <a (click)="acquistaFilm(movieDetails)">Acquista Film</a>
+      </div>
+      <!--passare id? -->
+      <div
+        style="
+          width: 40%;
+          background-color: rgba(60, 112, 255, 0.579);
+          border: 1px solid rgb(126, 123, 18);
+          display: block;
+          margin-top: 15px;
+          height: 40px;
+        "
+        class="btn btn-primary"
+        (click)="showTrailer()"
+      >
+        <a class="watchTrailer" [routerLink]="['/trailer', movieDetails]"
+          >Guarda Trailer</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center">
+  <ng-container *ngFor="let actor of castDetails.cast">
+    <div *ngIf="actor.profile_path" class="card-container">
+      <div class="card" style="width: 12em; height: auto; margin: 0.5em">
+        <img
+          [src]="'https://image.tmdb.org/t/p/original/' + actor.profile_path"
+          alt="{{ actor.name }} Image"
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <p class="card-text" style="font-size: 0.9em">
+            {{ actor.name }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<!-- trailer -->
+
+<div class="trailer" *ngIf="showTrailerDiv" style="border: solid 1px purple">
+  <div class="trailerDiv" *ngIf="trailerDetails">
+    <iframe [src]="trailerDetails" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <button mat-raised-button class="centered-button" (click)="chiudiTrailer()">
+    Chiudi
+  </button>
+</div>

@@ -1,0 +1,101 @@
+/* Add this to your global styles or component styles */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(250, 250, 0);
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #9034db28; /* Set the background color to a cool blue */
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-text {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff; /* Set the text color to white for better contrast */
+}
+
+.btn-primary {
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(232, 212, 63);
+  transform: scale(1.05);
+}
+/* dettaglio-film.component.css */
+
+.trailer {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 7, 12, 0.904);
+  /* z-index: 1; */
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+/* trailer */
+.trailerDiv {
+  margin: 20px auto; /* Adjust the margin value according to your preference */
+  max-width: 885px;
+  height: 500px;
+  border: solid 2px pink;
+  overflow: hidden; /* Ensures the border doesn't expand with iframe content */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove default iframe border */
+  border-radius: 8px; /* Add a subtle border-radius for a rounded look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+/* Optional: Hover effect for some interactivity */
+iframe:hover {
+  transform: scale(1.05); /* Scale up the iframe on hover */
+}
+
+/* bottone trailer chiudi trailer */
+
+.centered-button {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+}
+.centered-button:hover {
+  background-color: red;
+  color: white;
+}

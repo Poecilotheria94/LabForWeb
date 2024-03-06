@@ -1,0 +1,133 @@
+/* Aggiungi questo stile al tuo foglio di stile CSS */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(255, 179, 3);
+}
+
+.containers {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.oneLine {
+  color: azure;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 6px;
+  font-size: 1em;
+}
+
+img {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+button {
+  margin: 10px;
+  /* border-radius: 10px; */
+  transition: 0.8s;
+}
+button:hover {
+  transform: scale(1.2);
+  color: white;
+  background-color: rgb(145, 249, 0);
+  /* border-radius: 10px; */
+}
+
+.sup-catalogo {
+  background-color: #76e311; /* Initial background color */
+  animation: fadeBackground 5s infinite alternate; /* Adjust duration as needed */
+}
+
+/* button {
+  background-color: rgb(255, 179, 3);
+  color: black;
+  font-weight: bolder;
+  font-size: 0.8em;
+} */
+
+@keyframes fadeBackground {
+  0% {
+    background-color: #9f25aa; /* Initial color */
+  }
+  100% {
+    background-color: #28032a; /* Target color */
+  }
+}
+
+/* gestione bottone per tornare su */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: rgba(206, 12, 227, 0.588);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: 0.3s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+  background-color: rgb(174, 0, 255);
+}
+
+.containerf {
+  display: flex;
+  /* border: solid 1px violet; */
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+}
+p {
+  color: white;
+}
+.help a img {
+  width: 2.8em;
+}
+
+@media (max-width: 768px) {
+  .containers {
+    margin-top: 20px;
+  }
+
+  .oneLine {
+    font-size: 0.8em;
+  }
+
+  .containerf {
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+/* Existing styles */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .containers {
+    margin-top: 20px;
+  }
+
+  .oneLine {
+    font-size: 0.8em;
+  }
+
+  .containerf {
+    height: auto;
+    flex-direction: column;
+  }
+}

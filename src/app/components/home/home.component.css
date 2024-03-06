@@ -1,0 +1,38 @@
+/* .welcomePopUp {
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+} */
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.welcomePopUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(../../../assets/immagini/cinema.webp);
+  background-position: 50% 60%;
+}
+
+.auth {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  background-color: rgba(96, 96, 96, 0.315);
+  padding: 15px;
+  border-radius: 5px;
+}
+p {
+  color: white;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
